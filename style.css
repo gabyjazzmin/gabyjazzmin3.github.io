@@ -3,6 +3,25 @@
     color:black;
     border-width: thick;
     border-color: black;
+    width: 130px;
+    font-weight: 1000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+h2{
+    font-size: larger;
+    font-style: oblique;
+}
+
+p{
+    height: auto;
+    background-color: burlywood;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 body{
