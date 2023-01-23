@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,*:before, *:after {
   box-sizing: inherit;
 }
@@ -11,6 +12,27 @@ h1{
 
 h2{
   text-align: center;
+}
+
+
+
+.menu{
+  background-color: slateblue;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  opacity: 0; 
+  display: none;
+}
+
+.menu li {
+  list-style: none;
+  background-color: red;
+
 }
 
 
@@ -36,6 +58,19 @@ body {
   padding:1rem 0;
   border-radius: var(--radius);
   justify-content: flex-end;
+}
+
+.hamburguer{
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 31px;
+}
+
+.hamburguer:hover{
+  cursor: pointer;
+  background-color: blue;
+
 }
 
 main{
