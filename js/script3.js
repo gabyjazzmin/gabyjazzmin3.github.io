@@ -42,10 +42,8 @@
                 a.attr("data-moving", "false");
 
                 var x = $("<div>");
-                $(x).append(`<h3>'${element.title}'</h3>`)  
                 $(x).append(a);                
-                $(x).append(`<h4> PG: '${element.rating}'</h4>`);
-                $(x).append(`<h4> By: '${element.username}'</h4>`);
+                $(x).append(`<h4> Rating: '${element.rating}'</h4>`);
                 $("#animals").append(x);
             })
         })
