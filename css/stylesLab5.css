@@ -8,6 +8,12 @@ h1{
     padding: 50px;
     padding-bottom: 25px;
 }
+h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 25px;
+}
 form{
     text-align: center;
     padding: 25px;
@@ -60,4 +66,12 @@ button{
     text-decoration: line-through;
 }.itemShop{
     font-style: italic;
+}
+
+h3{
+    text-align: center;
+}
+
+itesm{
+    text-align: center;
 }
