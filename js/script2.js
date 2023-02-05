@@ -1,28 +1,32 @@
-﻿$("#ButtonPost").click(TodoPost)
-$("#ButtonClear").click(TodoClear)
-$("#ButtonMark").click(TodoMark)
-$("#ButtonDelete").click(TodoDelete)
+﻿/* Funcion para agregar elementos
+$("$shoppingForm").on('submit', function(e){
+   var text = $('#addToList').val();
+   $('#shoppingList').append('<li>'+text+'<li>');
+   e.preventDefault()
+})}*/
 
-function TodoPost(e){
-    
-e.preventDefault()
-let todo = $("#todoText").val()
-$("#todoList").append(`<input type="checkbox" name="todo" /> <label>${todo} </label>  <br>    `)
-}
-function TodoMark(){
-   let todos = $("[name='todo']")
- for(let i =0;i < todos.length; i++){
-    todos[i].checked = true
+// Funcion para remover elementos
+function removeLi() {
+   $(this).parent().remove();
  }
-}
 
-function TodoClear(){
-    let todos = $("[name='todo']")
-    for(let i =0;i < todos.length; i++){
-       todos[i].checked = false
-    }
-}
+ // Funcion para hacer línea 
+function strikeThrough() {
+   if ($(this).parent().css('textDecoration') == 'line-through') {
+     $(this).parent().css('textDecoration', 'none');
+   } else {
+     $(this).parent().css('textDecoration', 'line-through');
+   }
+ } 
 
-function TodoDelete(){
-    $("#todoList").html("")
-}
+ //Funcion para agregar elementos
+ $(document).ready(function() {
+   $('ButtonPost').click(function() {
+     var text = $('#addToList').val();
+     $('.shoppingList').append('<li>' + '<input class="check" type="checkMark"/>' + text + '<button class="deleteButton btn-danger">x</button>' + '</li>');
+     $('#addToList').val('').focus();
+     $(document).on('click', '.delete', removeLi);
+     $(document).on('click', '.check', strikeThrough);
+   });
+ });
+
